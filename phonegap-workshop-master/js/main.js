@@ -22,7 +22,7 @@ var app = {
     },
     
     renderHomeView: function() {
-        var html =
+        var html =e
                 "<div class='header'><h1>Home</h1></div>" +
                 "<div class='search-view'>" +
                 "<input class='search-key'/>" +
@@ -32,20 +32,21 @@ var app = {
         $('.search-key').on('keyup', $.proxy(this.findByName, this));
     },
 
-    /*initialize: function() {
+    initialize: function() {
         var self = this;
         this.store = new MemoryStore(function() {
             self.showAlert('Store Initialized', 'Info');
+            self.renderHomeView();
         });
-        $('.search-key').on('keyup', $.proxy(this.findByName, this));
-    }*/
+        //$('.search-key').on('keyup', $.proxy(this.findByName, this));
+    }
     
-    initialize: function() {
+    /*initialize: function() {
         var self = this;
         this.store = new MemoryStore(function() {
             self.renderHomeView();
         });
-    }
+    }*/
 
 };
 
